@@ -22,9 +22,9 @@ export default {
   methods: {
     fetchProjects() {
       axios.get("http://127.0.0.1:8000/api/projects").then((response) => {
-        console.log(response.data.projects);
+        console.log(response /* .data.projects */);
 
-        this.projects = response.data.projects;
+        this.projects = response.data /* .projects */;
         console.log(this.projects);
       });
     },
