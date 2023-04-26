@@ -14,7 +14,6 @@ export default {
 
 <template>
   <div class="container mt-5">
-    <h1 class="text-center">{{ title }}</h1>
     <div class="row g-3 d-flex">
       <ProjectCard
         v-for="project in projects"
