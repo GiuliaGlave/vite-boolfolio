@@ -19,7 +19,9 @@ export default {
     <AppHeader :title="title" />
   </header>
 
-  <RouterView></RouterView>
+  <main class="container mt-5">
+    <RouterView></RouterView>
+  </main>
 </template>
 
 <style lang="scss" scoped></style>

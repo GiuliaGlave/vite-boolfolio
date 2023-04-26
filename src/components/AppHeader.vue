@@ -41,12 +41,20 @@ export default {
           id="navbarNav"
         >
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a
-                class="nav-link active"
+            <li class="nav-item d-flex">
+              <router-link
+                :to="{ name: 'Homepage' }"
+                class="nav-link"
                 aria-current="page"
                 href="#"
-                >Home</a
+                >Home</router-link
+              >
+              <router-link
+                :to="{ name: 'Contacts' }"
+                class="nav-link"
+                aria-current="page"
+                href="#"
+                >Contacts</router-link
               >
             </li>
           </ul>

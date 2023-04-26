@@ -13,15 +13,13 @@ export default {
 </script>
 
 <template>
-  <div class="container mt-5">
-    <div class="row g-3 d-flex">
-      <ProjectCard
-        v-for="project in projects"
-        :project="project"
-        :key="project.id"
-        class="d-flex"
-      />
-    </div>
+  <div class="row g-3 d-flex">
+    <ProjectCard
+      v-for="project in projects"
+      :project="project"
+      :key="project.id"
+      class="d-flex"
+    />
   </div>
 </template>
 
