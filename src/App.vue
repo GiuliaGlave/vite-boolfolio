@@ -8,6 +8,7 @@ import ProjectCard from "./components/ProjectCard.vue";
 export default {
   data() {
     return {
+      title: "I miei progetti",
       projects: [],
     };
   },
@@ -21,10 +22,7 @@ export default {
   methods: {
     fetchProjects() {
       axios.get("http://127.0.0.1:8000/api/projects").then((response) => {
-        console.log(response.data.data);
-
         this.projects = response.data.data;
-        console.log(this.projects);
       });
     },
   },
@@ -36,10 +34,15 @@ export default {
 </script>
 
 <template>
-  <AppHeader />
+  <header>
+    <AppHeader />
+  </header>
 
   <main>
-    <ProjectList :projects="projects" />
+    <ProjectList
+      :projects="projects"
+      :title="title"
+    />
   </main>
 </template>
 
