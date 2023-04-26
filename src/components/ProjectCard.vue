@@ -44,6 +44,21 @@ export default {
         >
           <span>-</span>
         </div>
+
+        <div>
+          <router-link
+            type="button"
+            class="btn btn-sm btn-primary"
+            :to="{
+              name: 'project-detail',
+              params: {
+                id: project.id,
+              },
+            }"
+          >
+            open
+          </router-link>
+        </div>
       </div>
     </div>
   </div>
