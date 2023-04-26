@@ -11,7 +11,7 @@ export default {
 </script>
 
 <template>
-  <div class="container mt-5">
+  <!-- <div class="container mt-5">
     <div class="row g-3">
       <ProjectCard
         v-for="project in projects"
@@ -19,7 +19,7 @@ export default {
         :key="project.id"
       />
     </div>
-  </div>
+  </div> -->
 </template>
 
 <style lang="scss" scoped></style>
