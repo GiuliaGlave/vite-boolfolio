@@ -10,6 +10,7 @@ export default {
   // },
   props: {
     project: Object,
+    isDetail: Boolean,
   },
   computed: {
     getAbstract() {
@@ -20,13 +21,13 @@ export default {
 </script>
 
 <template>
-  <div class="col col-4">
+  <div>
     <div class="card">
-      <div class="card-header my-2">
+      <div class="card-header my-2 d-flex flex-grow-1">
         <h5 class="card-title">{{ project.title }}</h5>
       </div>
       <div class="card-body">
-        <p class="card-text">{{ getAbstract }}</p>
+        <p class="card-text">{{ isDetail ? project.details : getAbstract }}</p>
       </div>
       <div class="card-footer">
         <div v-if="project.type">
@@ -49,10 +50,11 @@ export default {
           <router-link
             type="button"
             class="btn btn-sm btn-primary"
+            v-if="!isDetail"
             :to="{
               name: 'project-detail',
               params: {
-                id: project.id,
+                slug: project.slug,
               },
             }"
           >

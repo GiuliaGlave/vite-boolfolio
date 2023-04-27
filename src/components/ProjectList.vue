@@ -13,11 +13,14 @@ export default {
 </script>
 
 <template>
-  <div class="row g-3 d-flex">
+  <h1 class="text-center mt-5">{{ title }}</h1>
+
+  <div class="row row-cols-4 g-4">
     <ProjectCard
       v-for="project in projects"
       :project="project"
       :key="project.id"
+      :isDetail="false"
       class="d-flex"
     />
   </div>

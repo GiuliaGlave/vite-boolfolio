@@ -7,6 +7,7 @@ export default {
   data() {
     return {
       projects: [],
+      title: "I miei progetti",
     };
   },
 
@@ -30,7 +31,10 @@ export default {
 </script>
 
 <template>
-  <ProjectList :projects="projects" />
+  <ProjectList
+    :projects="projects"
+    :title="title"
+  />
 </template>
 
 <style lang="scss" scoped></style>

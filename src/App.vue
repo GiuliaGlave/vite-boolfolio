@@ -3,9 +3,7 @@ import AppHeader from "./components/AppHeader.vue";
 
 export default {
   data() {
-    return {
-      title: "I miei progetti",
-    };
+    return {};
   },
 
   components: {
@@ -16,7 +14,7 @@ export default {
 
 <template>
   <header>
-    <AppHeader :title="title" />
+    <AppHeader />
   </header>
 
   <main class="container mt-5">
